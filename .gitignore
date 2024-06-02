@@ -1,0 +1,16 @@
+*.uvgui.29610
+*.uvopt
+*.uvproj
+*.iws
+*.iml
+*.ipr
+target/
+.settings
+.project
+.classpath
+.externalToolBuilders
+*.class
+*svn/
+.idea/
+*.jar
+~*
