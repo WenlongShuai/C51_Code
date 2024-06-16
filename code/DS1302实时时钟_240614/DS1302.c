@@ -36,6 +36,19 @@ void DS1302Init()
 	}
 }
 
+void DS1302AdjustmentTime(int *dat)
+{
+	uchar i = 0;
+	uchar tmp = 0;
+	DS1302WriteByte(0x8E, 0x00);  //关闭写保护，将0x8E寄存器的WP为写0
+	
+	//初始化DS1302的时钟和日历
+	for(i = 0;i < 7;i++)
+	{
+		tmp = ((dat[i] % 10) & 0x0f) | (((dat[i] / 10) << 4) & 0xf0);
+		DS1302WriteByte(ds1302WriteAddr[i], tmp);
+	}
+}
 
 /*******************************************************************************
 * 函 数 名       : DS1302WriteByte

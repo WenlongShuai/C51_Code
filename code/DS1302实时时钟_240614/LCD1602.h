@@ -8,8 +8,6 @@ sbit lcd1602_RS = P2^6;
 sbit lcd1602_WR = P2^5;
 sbit lcd1602_EN = P2^7;
 
-//typedef unsigned int uint;
-//typedef unsigned char uchar;
 #define uint unsigned int
 #define uchar unsigned char
 

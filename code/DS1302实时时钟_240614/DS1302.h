@@ -15,6 +15,7 @@ void DS1302Init();
 void readTime();
 uchar DS1302ReadByte(uchar readAddr);
 void DS1302WriteByte(uchar writeAddr, uchar dat);
+void DS1302AdjustmentTime(int *dat);
 
 
 #endif
